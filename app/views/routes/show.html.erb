@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start:</strong>
+  <%= @route.start %>
+</p>
+
+<p>
+  <strong>Stop:</strong>
+  <%= @route.stop %>
+</p>
+
+<p>
+  <strong>Fare:</strong>
+  <%= @route.fare %>
+</p>
+
+<%= link_to 'Edit', edit_route_path(@route) %> |
+<%= link_to 'Back', routes_path %>

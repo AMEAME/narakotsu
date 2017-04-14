@@ -1,0 +1,32 @@
+<%= form_for(route) do |f| %>
+  <% if route.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(route.errors.count, "error") %> prohibited this route from being saved:</h2>
+
+      <ul>
+      <% route.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start %>
+    <%= f.text_field :start %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stop %>
+    <%= f.text_field :stop %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fare %>
+    <%= f.number_field :fare %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
